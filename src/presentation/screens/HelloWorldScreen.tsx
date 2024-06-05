@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#006633',
+    backgroundColor: '#021d24',
   },
   title: {
     fontSize: 45,
     padding: 20,
     fontWeight: 'bold',
-    color: 'white',
+    color: 'black',
   },
 });

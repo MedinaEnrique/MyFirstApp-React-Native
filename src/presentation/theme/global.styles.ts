@@ -5,7 +5,7 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#006633',
+    backgroundColor: '#021d24',
   },
   subCenterContainer: {
     flexDirection: 'row',
