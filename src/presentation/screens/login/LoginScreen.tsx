@@ -17,5 +17,3 @@ export const LoginScreen = () => {
     />
   );
 };
-
-export default LoginScreen;

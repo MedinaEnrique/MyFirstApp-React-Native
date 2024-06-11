@@ -2,7 +2,8 @@ import {Picker} from '@react-native-picker/picker';
 import React from 'react';
 import {View, Text, TextInput, StyleSheet} from 'react-native';
 import {LoginViewProps} from './LoginView';
-import {Button} from 'react-native-paper';
+import {PrimaryButton} from '../../../components/shared/PrimaryButton';
+import {useNavigation} from '@react-navigation/native';
 
 const styles = StyleSheet.create({
   subContainer: {
@@ -43,19 +44,6 @@ const styles = StyleSheet.create({
     width: '100%',
     color: '#00435e',
   },
-  button: {
-    backgroundColor: '#00435e',
-    borderRadius: 20,
-    height: 50,
-    width: '100%',
-    marginVertical: 12,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#e6eff3',
-    fontSize: 15,
-  },
 });
 export const LoginContent = ({
   selectedType,
@@ -65,6 +53,7 @@ export const LoginContent = ({
   password,
   setPassword,
 }: LoginViewProps) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.subContainer}>
       <View style={styles.boxConatiner}>
@@ -103,9 +92,16 @@ export const LoginContent = ({
           onChangeText={setPassword}
         />
       </View>
-      <Button style={styles.button} mode="outlined">
+      <PrimaryButton
+        label={'INGRESAR'}
+        onPress={() => navigation.navigate('Home' as never)}
+      />
+      {/* <Button
+        style={styles.button}
+        mode="outlined"
+        onPress={() => navigation.navigate('Home' as never)}>
         <Text style={styles.buttonText}>INGRESAR</Text>
-      </Button>
+      </Button> */}
     </View>
   );
 };
