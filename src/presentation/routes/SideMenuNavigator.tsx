@@ -6,7 +6,7 @@ import {ProfileScreen} from '../screens/profile/ProfileScreen';
 const Drawer = createDrawerNavigator();
 export const SideMenuNavigator = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator initialRouteName="Home">
       <Drawer.Screen name="StackNavigator" component={StackNavigator} />
       <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
