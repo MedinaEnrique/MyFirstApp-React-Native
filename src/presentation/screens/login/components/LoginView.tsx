@@ -13,7 +13,7 @@ import LoginFooter from './LoginFooter';
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
+    height: '100%',
     backgroundColor: '#00435e',
   },
   scrollViewContent: {

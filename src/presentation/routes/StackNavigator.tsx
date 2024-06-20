@@ -1,17 +1,18 @@
-import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import React from 'react';
+import {SideMenuNavigator} from './SideMenuNavigator';
+import {ItemScreen} from '../screens/item/ItemScreen';
 import {LoginScreen} from '../screens/login/LoginScreen';
-import {HomeScreen} from '../screens/Home/HomeScreen';
 import ProductScreen from '../screens/products/ProductScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
-import {ItemScreen} from '../screens/item/ItemScreen';
 
 export type RootStackParamList = {
   Login: undefined;
-  Home: undefined;
   Products: undefined;
   Settings: undefined;
   Item: {id: number; name: string; description: string};
+  HomeDrawer: undefined;
+  Tabs: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -27,7 +28,11 @@ export const StackNavigator = () => {
         name="Login"
         component={LoginScreen}
       />
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="HomeDrawer"
+        component={SideMenuNavigator}
+      />
       <Stack.Screen name="Products" component={ProductScreen} />
       <Stack.Screen name="Settings" component={SettingsScreen} />
       <Stack.Screen name="Item" component={ItemScreen} />

@@ -94,7 +94,7 @@ export const LoginContent = ({
       </View>
       <PrimaryButton
         label={'INGRESAR'}
-        onPress={() => navigation.navigate('Home' as never)}
+        onPress={() => navigation.navigate('HomeDrawer' as never)}
       />
       {/* <Button
         style={styles.button}
